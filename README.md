@@ -9,7 +9,7 @@
 
 Explora las carpetas para ver los ejercicios y parciales resueltos:
 
-* 📁 [**Algoritmos y Estructuras de Datos (AyED)**](./AyED)
+* 📁 [**Algoritmos y Estructuras de Datos (AyED)**](https://github.com/oderayferrer/Mis-Parciales-Practica-UNLP/tree/main/Segundo%20A%C3%B1o/Algoritmos%20y%20Estructuras%20de%20Datos)
 
 
 ---
