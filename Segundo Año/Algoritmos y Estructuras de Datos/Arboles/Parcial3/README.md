@@ -7,7 +7,7 @@ Escribir una clase `ProcesadorDeArbol` que contenga una única variable de insta
 1. Una **lista** con todos los subárboles que cumplen: tienen 2 hijos y su dato es par.
 2. La **cantidad** total de valores pares presentes en todo el árbol.
 
-![Consigna del Parcial](./Parcial_24_de_Abril_2023_TEMA1.JPG)
+![Consigna del Parcial](./Parcial24Abril2023Tema1.JPG)
 
 ---
 
