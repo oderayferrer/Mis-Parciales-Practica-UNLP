@@ -9,44 +9,31 @@ public class ParcialArboles {
 		
 		if(arbol != null && !arbol.isEmpty()) {
 			List<Integer> caminoActual = new LinkedList<>();
-			helper(arbol,caminoMayorCosto,caminoActual,0);
+			int valorMax=-1;
+			helper(arbol,caminoMayorCosto,caminoActual,0,valorMax);
 		}
 		return caminoMayorCosto;
 	}
 	
-	private static void helper(GeneralTree<Integer> arbol, List<Integer> caminoMayorCosto, List<Integer> actual, int costoActual) {
-		boolean puedoEntrar = false;
-		if(actual.isEmpty()) {
-			puedoEntrar = true;
-		}else {
-			int anterior = actual.get(actual.size()-1);
-			int act = arbol.getData();
-			if(anterior >= 0 && act < 0 || anterior < 0 && act >= 0) {
-				puedoEntrar = true;
-				}
-		}
-		if(puedoEntrar) {
+	private static int helper(GeneralTree<Integer> arbol, List<Integer> caminoMayorCosto, List<Integer> actual, int costoActual,int valorMax) {
+
 			actual.add(arbol.getData());
 			costoActual += arbol.getData();
 			
 			if(arbol.isLeaf()) {
-				if(caminoMayorCosto.isEmpty() || costoActual > sumarCosto(caminoMayorCosto)) {
+				if(costoActual > valorMax) {
 					caminoMayorCosto.clear();
 					caminoMayorCosto.addAll(actual);
+					valorMax = costoActual;
 				}
 			}
 			for(GeneralTree<Integer> child : arbol.getChildren()) {
-				helper(child,caminoMayorCosto,actual,costoActual);
+				if(arbol.getData() >= 0 && child.getData() < 0 || arbol.getData() < 0 && child.getData() >= 0) {
+					valorMax = helper(child,caminoMayorCosto,actual,costoActual,valorMax);
+				}	
 			}
 			actual.remove(actual.size() -1);
-		}
+			return valorMax;
 	}
 	
-	private static int sumarCosto(List<Integer> lista) {
-		int suma = 0;
-		for(int num: lista) {
-			suma+= num;
-		}
-		return suma;
-	}
 }
