@@ -22,7 +22,7 @@ Explora las carpetas para ver los ejercicios y parciales resueltos:
 ---
 
 ## ⚠️ Disclaimer
-> [!IMPORTANT]
+> [!IMPORTANTE]
 > Las resoluciones compartidas en este repositorio son de carácter personal. No representan necesariamente las soluciones oficiales de las cátedras. Úsalos como guía de estudio.
 
 ---
