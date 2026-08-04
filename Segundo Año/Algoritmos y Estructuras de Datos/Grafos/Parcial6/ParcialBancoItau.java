@@ -73,8 +73,8 @@ public class ParcialBancoItau {
 				// si la persona que desencole es jubilado y no percibio jubilacion lo agrego a la lista del resultado
 				if(p.getData().isJubilado() && !p.getData().isPercibioJubilacion()) {
 					if(resultado.size()<40) {//si no superamos las 40 personas
-						resultado.add(p.getData());
-					
+						resultado.add(p.getData());	
+					}
 				}
 				for(Edge<Persona> e : grafo.getEdges(p)) {//miramos los vecinos 
 					Vertex<Persona> vecino = e.getTarget();
